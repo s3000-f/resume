@@ -1,0 +1,301 @@
+
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.1cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{d17a2e}
+\definecolor{PastelRed}{HTML}{2346a6}
+\definecolor{LightBlue}{HTML}{5b81c7}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{LightBlue}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\large\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Soroush Fathi}
+\tagline{Software engineer}
+%% You can add multiple photos on the left or right
+% \photoR{2.8cm}{soroush_profile.jpg}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{soroushfathi3000@gmail.com}
+  \phone{+98 938 983 6341}
+  \location{Teharn, Iran}
+  \linkedin{www.linkedin.com/in/soroush-fathi}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{CTO}{Vira Negar}{March 2019 -- Ongoing}{Tehran, Iran}
+\begin{itemize}
+\item Modernized and simplified development process using up-to-date methods such as microservice architecture and DevOps paradigms which reduced maintenance costs dramatically.
+\item Lead and manage multiple projects and teams.
+\item Design architecture for back-end, front-end and applications.
+\item Implement scalable and stable infrastructure based on K8s and Docker.
+\item Automating deployment process.
+\item Develop and design databases that support applications and websites.
+\item Setup and maintain multiple servers and services.
+\item Handle contract negotiations.
+\end{itemize}
+
+\divider
+
+\cvevent{Android/iOS Developer}{Vira Negar}{July 2018 -- March 2019}{Tehran, Iran}
+\begin{itemize}
+\item Design architecture for both android and iOS applications.
+\item Developed applications using native languages ensuring the best performance possible.
+\item Develop and design mobile databases.
+\end{itemize}
+
+\divider
+
+\cvevent{CTO}{Didar Startup}{January 2017 -- July 2018}{Tehran, Iran}
+\begin{itemize}
+\item Co-founded the startup.
+\item Designed business plan, financial plan and marketing plan.
+\item lead and manage multiple projects and teams.
+\item Design architecture for both android and IOS applications.
+\item Developed applications using native languages.
+\end{itemize}
+
+\divider
+
+\cvevent{Teaching Assistant}{Shahid Beheshti University}{2017 -- June 2019}{Tehran, Iran}
+\begin{itemize}
+\item Teaching assistant for advanced programming course.
+\item Teaching assistant for Introduction to Programming.
+\item Taught java and C++.
+\item Helped students gain valuable real-world development experience with android (Java) development.
+\end{itemize}
+
+
+\cvsection{Notable Projects}
+
+\cvevent{Bookital}{Vira Negar}{}{}
+\begin{itemize}
+\item \href{https://bookital.ir}{Bookital.ir}
+\item Online bookstore specializing in college entrance exam textbooks.
+\item Designed microservice architecture for the backend.
+\item Implemented scalable and easily maintainable back-end application using Nest.js. 
+\item Deployed all services to K8s.
+\item Redeployed all services with automatic deployment using Docker and Bash scripts.
+\end{itemize}
+
+\divider
+
+\cvevent{Biarai}{Vira Negar}{}{}
+\begin{itemize}
+\item Virtual Make-up testing app.
+\item Implemented opencv for real-time computer vision.
+\item Implemented face recognition pattern using dlib.
+\end{itemize}
+
+\divider
+
+\cvevent{Sahmnak}{Vira Negar}{}{}
+\begin{itemize}
+\item \href{https://sahmnak.com}{Sahmnak.com}
+\item Implemented high-performance crawler using golang, capable of syncing stock exchange database in matter of seconds.
+\item Communicate with the main server using MQTT and websocket
+\end{itemize}
+
+\divider
+
+\cvevent{Hadaf website and application}{Vira Negar}{}{}
+\begin{itemize}
+\item Designed the website and application.
+\item Developed application using swift, kotlin and C\#.
+\item Implemented highly optimized code for an encrypted video player.
+\end{itemize}
+
+\divider
+
+\cvevent{Building scalable infrastructure with Kubernetes}{Vira Negar}{}{}
+\begin{itemize}
+\item Implemented Kubernetes to sustain exponential growth and enable scalability.
+\item Dockerized projects.
+\item Developed helm charts for many projects to ease the process of deployment on K8 cluster.
+\end{itemize}
+
+
+\medskip
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+% \cvsection{Publications}
+
+% \nocite{*}
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Professional Summery}
+
+\begin{multiline}
+Highly skilled and motivated senior software engineer with 9+ years of experience in design, development and deployment of various applications and websites. Detail oriented leader with strong organizational abilities. Core competencies include software, back-end and front-end development, supporting and automating critical deployments over different infrastructures as well as excellent communication and problem solving skills. 
+\end{multiline}
+
+
+\cvsection{Skills}
+\cvtag{Node.js}
+\cvtag{Nest.js}
+\cvtag{Golang}
+\cvtag{Python}
+\cvtag{Vue.js}
+\cvtag{Android}
+\cvtag{iOS}\\
+% \cvtag{Java}
+% \cvtag{C++}
+
+\divider\smallskip
+
+\cvtag{Docker}
+\cvtag{Kubernetes}
+\cvtag{Prometheus}
+\cvtag{Helm}
+\cvtag{AWS}
+
+\divider\smallskip
+
+\cvtag{MySQL}
+\cvtag{PostgreSQL}
+\cvtag{MongoDB}
+\cvtag{Neo4j}\\
+\cvtag{Redis}
+\cvtag{Python}
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{Farsi}{5}
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+\cvsection{Education}
+
+\cvevent{M.S in Artificial Intelligence }{Islamic Azad University}{Sept 2021 -- Ongoing}{}
+
+\divider
+\cvevent{B.S in Computer Engineering}{Shahid Beheshti University}{Sept 2016 -- August 2021}{}
+
+\divider
+
+\cvevent{Diploma in Mathematics}{Alameh Heli Highschool}{January 2014 -- January 2016}{}
+\newpage
+
+
+\cvsection{Courses}
+\item\href{https://www.coursera.org/professional-certificates/devops-and-software-engineering}{IBM DevOps and Software Engineering Professional Certificate on Coursera}
+
+
+
+\cvsection{Publications}
+
+\cvevent{Graphlets Importance Ranking in Complex Networks based on the Spectral Energy Contribution}{International Journal of Computer Mathematics: Computer Systems Theory, 1-14 2020}{}
+
+
+\cvevent{A method for computing local contributions to graph energy based on Estrada–Benzi approach}{Discrete Applied Mathematics 260, 214-226 2019}{}
+
+
+\divider
+
+
+% \divider
+
+\end{paracol}
+
+
+\end{document}
